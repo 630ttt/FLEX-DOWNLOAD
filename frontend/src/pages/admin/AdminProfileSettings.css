@@ -1,0 +1,373 @@
+/* =========================================================
+   YAMINI FLEX PRINTING
+   ADMIN PROFILE SETTINGS
+   ========================================================= */
+
+.admin-profile-settings-page {
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.admin-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.admin-profile-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-profile-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--admin-yellow, #f5b800);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.admin-profile-kicker::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--admin-yellow, #f5b800);
+  border-radius: 10px;
+}
+
+.admin-profile-heading .section-title {
+  margin: 0;
+  font-size: clamp(2rem, 2.8vw, 2.7rem);
+}
+
+.admin-profile-heading .section-subtitle {
+  margin: 0;
+  color: var(--admin-text-muted, #718096);
+  font-size: 0.94rem;
+}
+
+.admin-back-btn {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-profile-error,
+.admin-profile-success {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.admin-profile-error {
+  background: #fff1f1;
+  border: 1px solid #fdb3b9;
+  color: #a5262c;
+}
+
+.admin-profile-success {
+  background: #eefcf5;
+  border: 1px solid #a5e6bd;
+  color: #136a42;
+}
+
+.admin-profile-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.loader-spine {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--admin-blue-light, #fff3bf);
+  border-top-color: var(--admin-blue, #f4c542);
+  animation: spin 900ms linear infinite;
+}
+
+.admin-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.admin-profile-card {
+  background: #ffffff;
+  border: 1px solid var(--admin-border, #e2e8f0);
+  border-radius: 16px;
+  box-shadow: var(--admin-shadow-sm, 0 2px 8px rgba(5, 43, 92, 0.06));
+  padding: 22px;
+}
+
+.profile-summary-card {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--admin-blue-deep, #171717), var(--admin-blue, #f4c542));
+  color: #ffffff;
+}
+
+.admin-profile-avatar-wrap {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.12);
+}
+
+.admin-profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--admin-yellow, #f5b800);
+  color: var(--admin-blue-deep, #171717);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.admin-profile-summary-content {
+  flex: 1;
+}
+
+.admin-profile-label {
+  display: block;
+  color: #d3e7ff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.admin-profile-summary-content h2 {
+  margin: 8px 0 12px;
+  color: #ffffff;
+  font-size: clamp(1.9rem, 2.8vw, 2.4rem);
+}
+
+.admin-profile-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #dceaff;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.admin-profile-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-profile-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--admin-border, #e2e8f0);
+  color: var(--admin-blue-deep, #171717);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.admin-profile-card-head span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-profile-card-status {
+  color: var(--admin-text-muted, #718096);
+}
+
+.admin-profile-card-status.secure {
+  color: var(--admin-yellow, #f5b800);
+}
+
+.admin-profile-form {
+  margin-top: 18px;
+}
+
+.admin-profile-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.admin-profile-form-row.password-stack {
+  grid-template-columns: 1fr;
+}
+
+.admin-profile-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--admin-text-muted, #718096);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.admin-profile-form input {
+  border: 1px solid var(--admin-border, #e2e8f0);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 11px 12px;
+  color: var(--admin-text, #172033);
+  font: inherit;
+}
+
+.admin-profile-form input:read-only {
+  background: #eef3f8;
+}
+
+.admin-profile-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-profile-form-actions .btn,
+.admin-back-btn {
+  min-height: 42px;
+  padding: 10px 16px;
+}
+
+.admin-profile-health-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.health-metric {
+  background: #f8fbff;
+  border-radius: 14px;
+  border: 1px solid var(--admin-border, #e2e8f0);
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.health-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-icon.success {
+  background: #dff8e8;
+  color: #136a42;
+}
+
+.health-icon.warning {
+  background: #fff7d6;
+  color: #b58100;
+}
+
+.health-icon.info {
+  background: #fff3bf;
+  color: var(--admin-blue, #f4c542);
+}
+
+.health-label {
+  display: block;
+  color: var(--admin-text-muted, #718096);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.health-value {
+  display: block;
+  margin-top: 6px;
+  color: var(--admin-text, #172033);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .admin-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-summary-card {
+    grid-column: span 1;
+  }
+
+  .admin-profile-health-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .admin-profile-settings-page {
+    padding: 16px 0 30px;
+  }
+
+  .admin-profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-summary-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-profile-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-profile-form-actions {
+    justify-content: stretch;
+  }
+
+  .admin-profile-form-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .admin-profile-settings-page {
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

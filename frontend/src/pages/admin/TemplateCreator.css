@@ -1,0 +1,70 @@
+.template-creator-page { max-width: 1600px; }
+.template-creator-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; color: #55625d; font-size: 13px; font-weight: 650; text-decoration: none; }
+.template-creator-header { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 16px; }
+.template-creator-fields { flex: 1; display: grid; grid-template-columns: minmax(200px, 1fr) minmax(220px, 1.4fr); gap: 12px; }
+.template-creator-fields label { color: #596660; font-size: 11px; font-weight: 700; }
+.template-creator-fields input { display: block; width: 100%; height: 38px; margin-top: 5px; border: 1px solid #d9e0da; border-radius: 5px; padding: 0 10px; color: #263330; background: #fff; font: inherit; font-size: 13px; }
+.template-creator-actions { display: flex; align-items: center; gap: 8px; }
+.template-creator-actions .btn { padding: 9px 12px; font-size: 12px; }
+.template-save-state { min-width: 84px; color: #5d7464; font-size: 11px; font-weight: 650; text-align: right; }
+.template-save-state.is-error, .template-creator-error { color: #a23024; }
+.template-creator-error { padding: 10px 12px; background: #fff0ed; border-left: 3px solid #cf4a35; font-size: 13px; }
+.template-creator-page > .design-editor { min-height: 700px; }
+@media (max-width: 900px) { .template-creator-header { align-items: stretch; flex-direction: column; } .template-creator-actions { justify-content: flex-end; } }
+@media (max-width: 620px) { .template-creator-fields { grid-template-columns: 1fr; } .template-creator-actions { flex-wrap: wrap; } }
+
+@media (min-width: 701px) {
+	.admin-layout:has(.template-creator-page),
+	.admin-layout:has(.template-creator-page) .admin-content {
+		height: 100dvh;
+		min-height: 0;
+		overflow: hidden;
+	}
+
+	.admin-layout:has(.template-creator-page) .admin-main {
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
+		overflow: hidden;
+	}
+
+	.template-creator-page {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		min-height: 0;
+		overflow: hidden;
+	}
+
+	.template-creator-page > .design-editor {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		min-height: 0;
+	}
+
+	.template-creator-page > .design-editor > .editor-toolbar {
+		flex: 0 0 auto;
+	}
+
+	.template-creator-page > .design-editor > .editor-workspace {
+		flex: 1;
+		min-height: 0;
+		overflow: hidden;
+	}
+
+	.template-creator-page .editor-panel {
+		min-height: 0;
+		overflow-y: auto;
+	}
+
+	.template-creator-page .editor-canvas-area {
+		min-height: 0;
+	}
+
+	.template-creator-page .editor-canvas-scroll {
+		min-height: 0;
+		overflow: auto;
+		place-items: center;
+	}
+}

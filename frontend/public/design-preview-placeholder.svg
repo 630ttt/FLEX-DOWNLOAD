@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title">
+  <title id="title">Design preview unavailable</title>
+  <rect width="640" height="420" fill="#f3f0e9"/>
+  <rect x="188" y="86" width="264" height="190" rx="12" fill="#fffdf8" stroke="#d8cfc2" stroke-width="4"/>
+  <circle cx="276" cy="151" r="20" fill="#e3cd9a"/>
+  <path d="M210 247l63-63 43 42 34-31 70 52z" fill="#b8860b" opacity=".72"/>
+  <path d="M234 310h172" stroke="#6e1423" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <path d="M262 337h116" stroke="#8b8176" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+</svg>

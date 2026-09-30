@@ -1,0 +1,46 @@
+.premium-color-picker {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.premium-color-picker__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.premium-color-picker__rgb {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.premium-color-picker__swatch input[type='color'] {
+  width: 100%;
+  height: 38px;
+}
+
+.premium-color-picker__label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #697472;
+}
+
+.premium-color-picker__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.premium-color-picker__dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  padding: 0;
+}
+
+.premium-color-picker__dot.is-active {
+  outline: 2px solid #f4c542;
+  outline-offset: 2px;
+}

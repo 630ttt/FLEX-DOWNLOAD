@@ -1,0 +1,812 @@
+/*
+/* =========================================================
+   YAMINI FLEX PRINTING
+   PREMIUM ADMIN TABLE / DESIGNS
+   Theme: Blue + Yellow + White
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.admin-designs-page {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.designs-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.designs-heading {
+  position: relative;
+}
+
+.designs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: #c58b00;
+
+  font-size: 0.69rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.designs-eyebrow::before {
+  content: "";
+
+  width: 22px;
+  height: 2px;
+
+  background: #f4b400;
+
+  border-radius: 10px;
+}
+
+.designs-heading .section-title {
+  margin: 0 0 7px;
+
+  color: #0647a6;
+
+  font-family: var(
+    --font-heading,
+    "Georgia",
+    serif
+  );
+
+  font-size: 2.1rem;
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+.designs-heading .section-subtitle {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADD DESIGN BUTTON
+   ========================================================= */
+
+.designs-add-btn {
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 18px rgba(11, 94, 215, 0.18);
+
+  white-space: nowrap;
+}
+
+.designs-add-btn svg {
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.designs-summary {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.designs-summary-card {
+  min-height: 80px;
+
+  padding: 15px 17px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e9f3;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 5px 18px rgba(8, 45, 95, 0.045);
+}
+
+.designs-summary-icon {
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  font-size: 0.9rem;
+}
+
+.designs-summary-icon.blue {
+  color: #0647a6;
+  background: #edf4ff;
+}
+
+.designs-summary-icon.yellow {
+  color: #c58b00;
+  background: #fff7d7;
+}
+
+.designs-summary-icon.navy {
+  color: #0647a6;
+  background: #edf2fb;
+}
+
+.designs-summary-card span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #98a2b3;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+.designs-summary-card strong {
+  display: block;
+
+  color: #17365f;
+
+  font-size: 1.1rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.admin-designs-table-card {
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8f1;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 10px 30px rgba(8, 45, 95, 0.055);
+}
+
+
+/* =========================================================
+   TABLE TOP BAR
+   ========================================================= */
+
+.admin-table-topbar {
+  min-height: 80px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fbff 100%
+    );
+
+  border-bottom: 1px solid #e7edf5;
+}
+
+.admin-table-topbar h2 {
+  margin: 0 0 4px;
+
+  color: #17365f;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+}
+
+.admin-table-topbar p {
+  margin: 0;
+
+  color: #98a2b3;
+
+  font-size: 0.72rem;
+}
+
+.designs-count-badge {
+  padding: 7px 11px;
+
+  color: #0647a6;
+
+  background: #edf4ff;
+
+  border: 1px solid #d8e7fb;
+
+  border-radius: 50px;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE SCROLL
+   ========================================================= */
+
+.admin-table-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+}
+
+.admin-table-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.admin-table-scroll::-webkit-scrollbar-track {
+  background: #f2f5f9;
+}
+
+.admin-table-scroll::-webkit-scrollbar-thumb {
+  background: #c7d4e5;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.admin-table {
+  width: 100%;
+
+  min-width: 780px;
+
+  border-collapse: collapse;
+
+  border-spacing: 0;
+}
+
+.admin-table thead {
+  background: #f7f9fc;
+}
+
+.admin-table th {
+  padding: 14px 20px;
+
+  color: #68778d;
+
+  font-size: 0.67rem;
+
+  font-weight: 800;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.07em;
+
+  border-bottom: 1px solid #e5ebf3;
+
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 15px 20px;
+
+  color: #344054;
+
+  font-size: 0.82rem;
+
+  vertical-align: middle;
+
+  border-bottom: 1px solid #edf1f6;
+}
+
+.admin-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #f9fbff;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   DESIGN IMAGE
+   ========================================================= */
+
+.admin-design-preview {
+  display: flex;
+  align-items: center;
+}
+
+.admin-design-image-wrap {
+  width: 76px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #f3f6fa;
+
+  border: 1px solid #e1e8f1;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 3px 8px rgba(8, 45, 95, 0.05);
+}
+
+.admin-table-thumb {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.admin-table tbody tr:hover .admin-table-thumb {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   TITLE CELL
+   ========================================================= */
+
+.admin-design-title-cell {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  max-width: 250px;
+}
+
+.admin-design-title-cell strong {
+  color: #17365f;
+
+  font-size: 0.84rem;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+.admin-design-title-cell span {
+  color: #a0aab8;
+
+  font-size: 0.65rem;
+
+  font-family: monospace;
+}
+
+
+/* =========================================================
+   CATEGORY BADGE
+   ========================================================= */
+
+.design-category-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  max-width: 180px;
+
+  padding: 7px 10px;
+
+  color: #0647a6;
+
+  background: #edf4ff;
+
+  border: 1px solid #dce9fa;
+
+  border-radius: 7px;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+}
+
+.design-category-badge svg {
+  font-size: 0.62rem;
+
+  color: #0647a6;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.design-price {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.design-price-icon {
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c58b00;
+
+  background: #fff7d7;
+
+  border-radius: 6px;
+
+  font-size: 0.62rem;
+}
+
+.design-price strong {
+  color: #17365f;
+
+  font-size: 0.88rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.admin-table-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.admin-action-btn {
+  width: 35px;
+  height: 35px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.admin-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.admin-edit-btn {
+  color: #0647a6;
+
+  background: #edf4ff;
+
+  border-color: #dbe9fb;
+}
+
+.admin-edit-btn:hover {
+  background: #dfeeff;
+
+  border-color: #c5dcf8;
+}
+
+.admin-delete-btn {
+  color: #d92d20;
+
+  background: #fff1f0;
+
+  border-color: #f9d5d2;
+}
+
+.admin-delete-btn:hover {
+  background: #ffe4e2;
+
+  border-color: #f2c0bc;
+}
+
+.admin-action-btn svg {
+  font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.admin-designs-empty {
+  min-height: 330px;
+
+  padding: 50px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.admin-empty-icon {
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0647a6;
+
+  background: #edf4ff;
+
+  border: 1px solid #dce9fa;
+
+  border-radius: 18px;
+
+  font-size: 1.6rem;
+}
+
+.admin-designs-empty h3 {
+  margin: 0 0 8px;
+
+  color: #17365f;
+
+  font-size: 1.1rem;
+
+  font-weight: 800;
+}
+
+.admin-designs-empty p {
+  max-width: 430px;
+
+  margin: 0 0 20px;
+
+  color: #8a96a8;
+
+  font-size: 0.8rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+
+.admin-designs-loader {
+  min-height: 350px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e9f3;
+
+  border-radius: 17px;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.admin-designs-pagination {
+  padding-top: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .designs-page-header {
+    align-items: flex-start;
+  }
+
+  .designs-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .admin-designs-page {
+    padding-bottom: 25px;
+  }
+
+  .designs-page-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 18px;
+  }
+
+  .designs-heading .section-title {
+    font-size: 1.7rem;
+  }
+
+  .designs-heading .section-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .designs-add-btn {
+    width: 100%;
+  }
+
+  .designs-summary {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .designs-summary-card {
+    min-height: 70px;
+  }
+
+  .admin-table-topbar {
+    padding: 16px;
+
+    align-items: flex-start;
+  }
+
+  .admin-table-topbar h2 {
+    font-size: 0.9rem;
+  }
+
+  .admin-table-topbar p {
+    font-size: 0.67rem;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .designs-eyebrow {
+    font-size: 0.6rem;
+  }
+
+  .designs-heading .section-title {
+    font-size: 1.5rem;
+  }
+
+  .designs-page-header {
+    margin-bottom: 18px;
+  }
+
+  .admin-table-topbar {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .designs-count-badge {
+    align-self: flex-start;
+  }
+
+  .admin-design-image-wrap {
+    width: 65px;
+    height: 52px;
+  }
+
+}
+

@@ -1,0 +1,85 @@
+.marketing-page {
+  padding-bottom: 0;
+}
+
+.marketing-hero {
+  padding: clamp(3rem, 8vw, 5rem) 0 2rem;
+}
+
+.marketing-lead {
+  max-width: 40rem;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--premium-text-muted);
+  margin: 0.75rem 0 0;
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  padding-bottom: 3rem;
+}
+
+.marketing-card {
+  padding: 1.5rem;
+}
+
+.marketing-card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.marketing-card-tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-600, var(--color-gold-dark));
+  margin: 0 0 0.75rem;
+}
+
+.marketing-pricing {
+  padding-bottom: 3rem;
+}
+
+.marketing-pricing-table {
+  overflow: hidden;
+}
+
+.marketing-pricing-head,
+.marketing-pricing-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--premium-border);
+}
+
+.marketing-pricing-head {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--premium-text-muted);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.marketing-note {
+  margin-top: 1rem;
+  color: var(--premium-text-muted);
+}
+
+.marketing-steps {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.marketing-step {
+  padding: 1.5rem;
+}
+
+.marketing-step-num {
+  font-weight: 700;
+  color: var(--gold-600, var(--color-gold-dark));
+  font-size: 0.85rem;
+}

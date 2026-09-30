@@ -1,0 +1,90 @@
+html[data-theme='dark'] .how-it-works-page {
+  background: var(--premium-bg) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .how-it-works-intro,
+html[data-theme='dark'] .how-it-works-process,
+html[data-theme='dark'] .how-it-works-status,
+html[data-theme='dark'] .how-it-works-cta {
+  background: transparent !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .how-it-works-page h2,
+html[data-theme='dark'] .how-it-works-step-card h3 {
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .how-it-works-intro p,
+html[data-theme='dark'] .how-it-works-step-card p,
+html[data-theme='dark'] .how-it-works-approval p,
+html[data-theme='dark'] .how-it-works-status-label,
+html[data-theme='dark'] .how-it-works-cta p {
+  color: var(--premium-text-muted) !important;
+}
+
+html[data-theme='dark'] .how-it-works-step-card,
+html[data-theme='dark'] .how-it-works-approval-card {
+  background: var(--premium-bg-elevated) !important;
+  border-color: var(--premium-border) !important;
+  color: var(--premium-text) !important;
+  box-shadow: var(--premium-shadow-md) !important;
+}
+
+html[data-theme='dark'] .how-it-works-step-number {
+  color: rgba(244, 247, 252, 0.16) !important;
+}
+
+html[data-theme='dark'] .how-it-works-step-icon,
+html[data-theme='dark'] .how-it-works-approval-icon {
+  background: rgba(120, 173, 255, 0.14) !important;
+  border-color: var(--premium-border-strong) !important;
+  color: var(--yamini-blue) !important;
+}
+
+html[data-theme='dark'] .how-it-works-step-status {
+  background: rgba(244, 197, 66, 0.14) !important;
+  border-color: rgba(244, 197, 66, 0.3) !important;
+  color: #ffe27a !important;
+}
+
+html[data-theme='dark'] .how-it-works-approval {
+  background: linear-gradient(135deg, #0b1c31, #10243b) !important;
+  border-color: var(--premium-border) !important;
+}
+
+html[data-theme='dark'] .how-it-works-approval-card strong {
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .how-it-works-approval-card > div:nth-of-type(3) {
+  background: var(--premium-bg-subtle) !important;
+  border-color: var(--premium-border) !important;
+}
+
+html[data-theme='dark'] .how-it-works-approval-file-icon {
+  background: rgba(244, 197, 66, 0.14) !important;
+}
+
+html[data-theme='dark'] .how-it-works-approval-button-secondary {
+  background: #0b1c31 !important;
+  border-color: var(--premium-border-strong) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .how-it-works-status-dot {
+  background: var(--premium-bg-elevated) !important;
+  border-color: var(--premium-border-strong) !important;
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .how-it-works-status-dot.is-active {
+  background: var(--yamini-blue) !important;
+  border-color: var(--yamini-blue) !important;
+  color: #061426 !important;
+}
+
+html[data-theme='dark'] .how-it-works-status-connector {
+  background: linear-gradient(90deg, #31557e, #203b5b) !important;
+}

@@ -1,0 +1,18 @@
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--premium-border);
+  background: var(--premium-bg-elevated);
+  color: var(--premium-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--premium-border-gold);
+  box-shadow: var(--premium-shadow-sm);
+}

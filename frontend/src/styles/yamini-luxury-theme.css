@@ -1,0 +1,578 @@
+/* YAMINI Flex — Blue, yellow, and white theme (global application layer) */
+
+:root {
+  --yamini-white: #ffffff;
+  --yamini-white-pure: #ffffff;
+  --yamini-ivory: #f5f7fa;
+  --yamini-champagne: #eaf1fb;
+  --yamini-surface-glass: rgba(255, 255, 255, 0.96);
+
+  --yamini-blue: #0647a6;
+  --yamini-blue-dark: #061426;
+  --yamini-yellow: #f4c542;
+  --yamini-yellow-dark: #d9a900;
+  --yamini-yellow-light: #fff3bf;
+  --yamini-yellow-soft: #fff9df;
+
+  --yamini-gold: var(--yamini-yellow);
+  --yamini-gold-elegant: var(--yamini-yellow-dark);
+  --yamini-gold-champagne: #ffe27a;
+  --yamini-gold-light: var(--yamini-yellow-light);
+  --yamini-gold-deep: var(--yamini-blue);
+
+  --yamini-text: #172033;
+  --yamini-text-secondary: #586273;
+  --yamini-text-muted: #8b95a5;
+
+  --yamini-border: rgba(23, 32, 51, 0.09);
+  --yamini-border-gold: rgba(244, 197, 66, 0.55);
+  --yamini-gradient-gold: linear-gradient(135deg, #f4c542, #ffe27a, #d9a900);
+
+  /* Map design-system tokens */
+  --premium-bg: var(--yamini-white);
+  --premium-bg-subtle: var(--yamini-ivory);
+  --premium-bg-elevated: var(--yamini-white-pure);
+  --premium-surface-glass: rgba(255, 255, 255, 0.92);
+  --premium-text: var(--yamini-text);
+  --premium-text-muted: var(--yamini-text-secondary);
+  --premium-border: var(--yamini-border);
+  --premium-border-gold: var(--yamini-border-gold);
+  --premium-border-strong: rgba(23, 32, 51, 0.14);
+
+  --gold-500: var(--yamini-yellow);
+  --gold-600: var(--yamini-yellow-dark);
+  --gold-700: var(--yamini-blue);
+  --gold-300: var(--yamini-gold-champagne);
+  --gold-100: var(--yamini-champagne);
+  --gold-gradient: var(--yamini-gradient-gold);
+  --gold-gradient-soft: linear-gradient(180deg, var(--yamini-white-pure) 0%, var(--yamini-ivory) 100%);
+  --premium-gradient-hero: linear-gradient(165deg, var(--yamini-white) 0%, var(--yamini-ivory) 55%, var(--yamini-champagne) 140%);
+
+  --color-burgundy: var(--yamini-blue);
+  --color-burgundy-dark: var(--yamini-blue-dark);
+  --color-cream: var(--yamini-white-pure);
+  --color-cream-dark: var(--yamini-ivory);
+  --color-charcoal: var(--yamini-text);
+  --color-gold: var(--yamini-yellow);
+  --color-gold-dark: var(--yamini-blue);
+  --color-gold-soft: var(--yamini-yellow-soft);
+
+  --editor-accent: var(--yamini-blue);
+  --editor-ink: var(--yamini-text);
+  --editor-muted: var(--yamini-text-muted);
+  --editor-border: rgba(23, 32, 51, 0.1);
+  --editor-surface: var(--yamini-ivory);
+  --editor-panel-bg: var(--yamini-white-pure);
+  --editor-canvas-bg: #eaf1fb;
+}
+
+.site-main {
+  background: var(--yamini-white);
+  color: var(--yamini-text);
+}
+
+/* Secondary buttons — blue border → blue fill on hover */
+.btn-premium--ghost:hover {
+  background: var(--yamini-gradient-gold) !important;
+  color: var(--yamini-text) !important;
+  border-color: transparent !important;
+}
+
+/* Design studio shell — white + blue */
+.design-studio-root {
+  background: var(--yamini-white) !important;
+  color: var(--yamini-text) !important;
+}
+
+.design-studio-toolbar {
+  background: var(--yamini-surface-glass) !important;
+  border-bottom: 1px solid var(--yamini-border) !important;
+  backdrop-filter: blur(14px);
+}
+
+.design-studio-doc__kicker {
+  color: var(--yamini-blue) !important;
+}
+
+.design-studio-doc h1 {
+  color: var(--yamini-text) !important;
+}
+
+.design-studio-doc__meta {
+  color: var(--yamini-text-muted) !important;
+}
+
+.design-studio-btn--ghost {
+  background: var(--yamini-white-pure) !important;
+  border-color: var(--yamini-border-gold) !important;
+  color: var(--yamini-text) !important;
+}
+
+.design-studio-btn--primary {
+  background: var(--yamini-blue) !important;
+  border-color: var(--yamini-blue) !important;
+  color: var(--yamini-white-pure) !important;
+  box-shadow: var(--premium-shadow-gold);
+}
+
+.design-studio-link {
+  color: var(--yamini-blue) !important;
+}
+
+.design-studio-canvas-host {
+  background: var(--yamini-ivory) !important;
+  padding: 0.75rem !important;
+}
+
+.design-studio-canvas-host .design-editor {
+  border: 1px solid var(--yamini-border) !important;
+  box-shadow: var(--premium-shadow-md) !important;
+  background: var(--yamini-white-pure) !important;
+}
+
+.design-studio-canvas-host .editor-canvas-area,
+.design-studio-canvas-host .editor-canvas-scroll {
+  background: var(--editor-canvas-bg) !important;
+  background-image: none !important;
+}
+
+/* Admin shell — light sidebar, blue active */
+.admin-layout {
+  background: var(--yamini-white);
+}
+
+.admin-layout {
+  --admin-blue: #0647a6;
+  --admin-blue-dark: #061426;
+  --admin-blue-deep: #061426;
+  --admin-blue-light: #eaf1fb;
+  --admin-yellow: #f4c542;
+  --admin-yellow-light: #fff3bf;
+  --admin-bg: #ffffff;
+  --admin-border: rgba(23, 32, 51, 0.09);
+  --admin-text: #172033;
+  --admin-text-muted: #586273;
+  --admin-sidebar-bg: #ffffff;
+  --admin-sidebar-text: #68645c;
+  --admin-accent: #0647a6;
+}
+
+.admin-sidebar {
+  background: var(--yamini-white-pure) !important;
+  border-right: 1px solid var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+.admin-nav-link-active,
+.admin-nav-link:hover {
+  color: var(--yamini-blue) !important;
+  background: var(--yamini-yellow-light) !important;
+}
+
+.admin-topbar {
+  background: var(--yamini-surface-glass) !important;
+  border-bottom: 1px solid var(--yamini-border) !important;
+}
+
+/* Auth — luxury split layout */
+.customer-auth-shell {
+  display: grid;
+  min-height: calc(100dvh - var(--nav-height));
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  gap: 0;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .customer-auth-shell {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.customer-auth-visual {
+  display: none;
+  border-radius: var(--premium-radius-lg);
+  background: var(--premium-gradient-hero);
+  border: 1px solid var(--yamini-border-gold);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .customer-auth-visual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.customer-auth-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(244, 197, 66, 0.25), transparent 55%);
+  pointer-events: none;
+}
+
+.customer-auth-visual h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: var(--yamini-text);
+  position: relative;
+}
+
+.customer-auth-visual p {
+  color: var(--yamini-text-secondary);
+  line-height: 1.7;
+  max-width: 28rem;
+  position: relative;
+}
+
+.customer-auth-page {
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-auth-card {
+  border: 1px solid var(--yamini-border) !important;
+  box-shadow: var(--premium-shadow-sm) !important;
+  background: var(--yamini-white-pure) !important;
+}
+
+.customer-auth-btn {
+  background: var(--yamini-blue) !important;
+  color: var(--yamini-white-pure) !important;
+  box-shadow: var(--premium-shadow-gold) !important;
+}
+
+.customer-auth-switch {
+  color: var(--yamini-text-secondary) !important;
+}
+
+.customer-auth-switch a {
+  color: var(--yamini-blue) !important;
+}
+
+/* Product / catalogue legacy color tokens */
+.design-details-page,
+.catalogue-page {
+  --design-blue: var(--yamini-blue);
+  --design-yellow: var(--yamini-yellow);
+  --design-bg: var(--yamini-white);
+}
+
+/* Order status badges — neutral surfaces with yellow status accents */
+.badge-confirmed,
+.badge-in-progress {
+  background: var(--yamini-yellow-light) !important;
+  color: var(--yamini-blue-dark) !important;
+}
+
+.badge-pending,
+.badge-awaiting-approval {
+  background: var(--yamini-ivory) !important;
+  color: var(--yamini-text-secondary) !important;
+}
+
+/* Error / not found */
+.not-found-page,
+.design-details-error {
+  background: var(--yamini-white);
+}
+
+/* Mobile editor dock */
+.editor-mobile-dock {
+  background: var(--yamini-surface-glass) !important;
+  border-top: 1px solid var(--yamini-border-gold) !important;
+  backdrop-filter: blur(12px);
+}
+
+.editor-mobile-dock button {
+  color: var(--yamini-text-secondary) !important;
+}
+
+.editor-mobile-dock button.is-active {
+  background: var(--yamini-champagne) !important;
+  color: var(--yamini-gold-deep) !important;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --yamini-white: #061426;
+  --yamini-white-pure: #0d2036;
+  --yamini-ivory: #10243b;
+  --yamini-champagne: #1a314d;
+  --yamini-surface-glass: rgba(13, 32, 54, 0.96);
+  --yamini-blue: #78adff;
+  --yamini-blue-dark: #061426;
+  --yamini-yellow: #f4c542;
+  --yamini-yellow-dark: #e0b52e;
+  --yamini-yellow-light: rgba(244, 197, 66, 0.16);
+  --yamini-yellow-soft: rgba(244, 197, 66, 0.1);
+  --yamini-gold: var(--yamini-yellow);
+  --yamini-gold-elegant: var(--yamini-yellow-dark);
+  --yamini-gold-champagne: #ffe27a;
+  --yamini-gold-light: var(--yamini-yellow-light);
+  --yamini-gold-deep: var(--yamini-blue);
+  --yamini-text: #f4f7fc;
+  --yamini-text-secondary: #c2cede;
+  --yamini-text-muted: #9cacc2;
+  --yamini-border: rgba(235, 243, 255, 0.14);
+  --yamini-border-gold: rgba(244, 197, 66, 0.42);
+  --yamini-gradient-gold: linear-gradient(135deg, #f4c542, #ffe27a, #d9a900);
+
+  --premium-bg: #061426;
+  --premium-bg-subtle: #0b1c31;
+  --premium-bg-elevated: #10243b;
+  --premium-surface-glass: var(--yamini-surface-glass);
+  --premium-text: var(--yamini-text);
+  --premium-text-muted: var(--yamini-text-secondary);
+  --premium-border: var(--yamini-border);
+  --premium-border-gold: var(--yamini-border-gold);
+  --premium-border-strong: rgba(235, 243, 255, 0.2);
+  --premium-gradient-hero: linear-gradient(165deg, #061426 0%, #0b1c31 55%, #10243b 100%);
+  --premium-shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.24);
+  --premium-shadow-md: 0 16px 48px rgba(0, 0, 0, 0.32);
+  --premium-shadow-lg: 0 28px 72px rgba(0, 0, 0, 0.4);
+  --premium-shadow-gold: 0 12px 40px rgba(244, 197, 66, 0.16);
+
+  --gold-500: var(--yamini-yellow);
+  --gold-600: var(--yamini-yellow-dark);
+  --gold-700: var(--yamini-blue);
+  --gold-300: var(--yamini-gold-champagne);
+  --gold-100: var(--yamini-champagne);
+  --gold-gradient: var(--yamini-gradient-gold);
+  --gold-gradient-soft: linear-gradient(180deg, #10243b 0%, #0b1c31 100%);
+
+  --color-burgundy: var(--yamini-blue);
+  --color-burgundy-dark: var(--yamini-blue-dark);
+  --color-cream: var(--yamini-white-pure);
+  --color-cream-dark: var(--yamini-ivory);
+  --color-charcoal: var(--yamini-text);
+  --color-gold: var(--yamini-yellow);
+  --color-gold-dark: var(--yamini-blue);
+  --color-gold-soft: var(--yamini-yellow-soft);
+
+  --editor-accent: var(--yamini-blue);
+  --editor-ink: var(--yamini-text);
+  --editor-muted: var(--yamini-text-muted);
+  --editor-border: var(--yamini-border);
+  --editor-surface: var(--yamini-ivory);
+  --editor-panel-bg: var(--yamini-white-pure);
+  --editor-canvas-bg: #091a2e;
+}
+
+html[data-theme='dark'] body,
+html[data-theme='dark'] .site-main,
+html[data-theme='dark'] .site-main .page-container {
+  background: var(--premium-bg) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .navbar--premium,
+html[data-theme='dark'] .navbar-mobile-panel,
+html[data-theme='dark'] .admin-sidebar,
+html[data-theme='dark'] .admin-topbar,
+html[data-theme='dark'] .design-studio-toolbar,
+html[data-theme='dark'] .editor-mobile-dock {
+  background: var(--yamini-surface-glass) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .footer--premium {
+  background: #04101f;
+  color: var(--premium-text);
+}
+
+html[data-theme='dark'] .site-main .card,
+html[data-theme='dark'] .site-main .premium-card,
+html[data-theme='dark'] .site-main .catalogue-search-bar,
+html[data-theme='dark'] .site-main .customer-account-section,
+html[data-theme='dark'] .site-main .customer-dashboard-hero,
+html[data-theme='dark'] .navbar--premium .btn-premium--ghost {
+  background: var(--premium-bg-elevated) !important;
+  border-color: var(--premium-border) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .site-main :is(input:not([type='checkbox']):not([type='radio']):not([type='file']), select, textarea),
+html[data-theme='dark'] .admin-layout :is(input:not([type='checkbox']):not([type='radio']):not([type='file']), select, textarea) {
+  background: #0b1c31 !important;
+  border-color: var(--premium-border-strong) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .site-main input::placeholder,
+html[data-theme='dark'] .site-main textarea::placeholder,
+html[data-theme='dark'] .admin-layout input::placeholder,
+html[data-theme='dark'] .admin-layout textarea::placeholder {
+  color: var(--yamini-text-muted) !important;
+  opacity: 1;
+}
+
+html[data-theme='dark'] .navbar--premium .navbar-link,
+html[data-theme='dark'] .navbar--premium .navbar-account,
+html[data-theme='dark'] .navbar--premium .navbar-search-compact,
+html[data-theme='dark'] .navbar--premium .navbar-mobile-link {
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .navbar--premium .navbar-link-active,
+html[data-theme='dark'] .navbar--premium .navbar-link:hover {
+  background: rgba(120, 173, 255, 0.14) !important;
+  color: var(--yamini-blue) !important;
+}
+
+html[data-theme='dark'] .btn-outline,
+html[data-theme='dark'] .btn-premium--ghost,
+html[data-theme='dark'] .btn-premium--dark {
+  background: var(--premium-bg-elevated) !important;
+  border-color: var(--premium-border-strong) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout {
+  --admin-blue: var(--yamini-blue);
+  --admin-blue-dark: var(--yamini-blue-dark);
+  --admin-blue-deep: #061426;
+  --admin-blue-light: #1a314d;
+  --admin-yellow: var(--yamini-yellow);
+  --admin-yellow-light: rgba(244, 197, 66, 0.16);
+  --admin-bg: #061426;
+  --admin-border: var(--yamini-border);
+  --admin-text: var(--yamini-text);
+  --admin-text-muted: var(--yamini-text-secondary);
+  --admin-sidebar-bg: #0d2036;
+  --admin-sidebar-text: var(--yamini-text-secondary);
+  --admin-accent: var(--yamini-blue);
+  background: var(--premium-bg) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .admin-nav-link-active,
+html[data-theme='dark'] .admin-nav-link:hover,
+html[data-theme='dark'] .editor-mobile-dock button.is-active {
+  background: var(--yamini-yellow-light) !important;
+  color: var(--yamini-yellow) !important;
+}
+
+html[data-theme='dark'] .design-studio-root,
+html[data-theme='dark'] .design-studio-canvas-host,
+html[data-theme='dark'] .design-studio-canvas-host .design-editor {
+  background: var(--premium-bg) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .design-studio-canvas-host .editor-canvas-area,
+html[data-theme='dark'] .design-studio-canvas-host .editor-canvas-scroll {
+  background: var(--editor-canvas-bg) !important;
+}
+
+html[data-theme='dark'] .studio-feature__chrome,
+html[data-theme='dark'] .studio-feature__props,
+html[data-theme='dark'] .studio-feature__pill {
+  background: var(--premium-bg-elevated) !important;
+  border-color: var(--premium-border) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .studio-feature__toolbar,
+html[data-theme='dark'] .studio-feature__rail {
+  background: var(--premium-bg-subtle) !important;
+  border-color: var(--premium-border) !important;
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .studio-feature__toolbar-title,
+html[data-theme='dark'] .studio-feature__canvas-inner p {
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .studio-feature__canvas {
+  background: #091a2e !important;
+}
+
+html[data-theme='dark'] .studio-feature__canvas-inner {
+  background: linear-gradient(145deg, #10243b, #0b1c31) !important;
+  border-color: var(--premium-border-gold) !important;
+}
+
+html[data-theme='dark'] .studio-feature__props div {
+  background: var(--yamini-yellow-light) !important;
+}
+
+html[data-theme='dark'] .design-gallery {
+  background: var(--premium-bg) !important;
+}
+
+html[data-theme='dark'] .design-gallery__figure figcaption {
+  background: rgba(13, 32, 54, 0.94) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .design-editor {
+  --editor-ink: var(--yamini-text);
+  --editor-muted: var(--yamini-text-muted);
+  --editor-border: var(--yamini-border);
+  --editor-accent: var(--yamini-blue);
+  background: var(--premium-bg-subtle) !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .design-editor .editor-toolbar,
+html[data-theme='dark'] .design-editor .editor-panel,
+html[data-theme='dark'] .design-editor .editor-tool-button,
+html[data-theme='dark'] .design-editor .editor-icon-button,
+html[data-theme='dark'] .design-editor .editor-elements-grid button,
+html[data-theme='dark'] .design-editor .editor-asset-swatch,
+html[data-theme='dark'] .design-editor .editor-upload-tile,
+html[data-theme='dark'] .design-editor .editor-size-fields input,
+html[data-theme='dark'] .design-editor .editor-property-label input,
+html[data-theme='dark'] .design-editor .editor-property-label select,
+html[data-theme='dark'] .design-editor [class*='-preset-grid'] button {
+  background: var(--yamini-white-pure) !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .design-editor :is(.editor-export-setting, .editor-customer-hint, .editor-size-fields label, .editor-property-label, .editor-style-presets > span, .editor-opacity-presets > span, .editor-effect-library > span, .editor-brand-pack > span, .editor-finish-pack > span, .editor-composition-pack > span, .editor-campaign-pack > span, .editor-packaging-pack > span, .editor-retail-pack > span, .editor-event-pack > span, .editor-vibe-pack > span, .editor-material-pack > span, .editor-print-mood-pack > span, .editor-editorial-mood-pack > span, .editor-seasonal-palette-pack > span, .editor-art-direction-pack > span, .editor-luxury-texture-pack > span, .editor-depth-layer-pack > span, .editor-atmosphere-pack > span) {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .design-editor button:hover:not(:disabled):not(.editor-tool-primary) {
+  background: #193350 !important;
+  border-color: var(--yamini-blue) !important;
+  color: var(--premium-text) !important;
+}
+
+html[data-theme='dark'] .site-main :is(
+  p:not([class*='error']):not([class*='success']):not([class*='status']):not([role='alert']),
+  .section-subtitle,
+  [class*='description'],
+  [class*='subtitle'],
+  [class*='lead']
+),
+html[data-theme='dark'] .admin-layout :is(
+  p:not([class*='error']):not([class*='success']):not([class*='status']):not([role='alert']),
+  [class*='description'],
+  [class*='subtitle'],
+  [class*='lead']
+),
+html[data-theme='dark'] .design-studio-root :is(
+  p:not([class*='error']):not([class*='success']):not([class*='status']):not([role='alert']),
+  [class*='description'],
+  [class*='subtitle'],
+  [class*='lead']
+) {
+  color: #ffffff !important;
+}

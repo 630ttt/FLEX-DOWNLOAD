@@ -1,0 +1,57 @@
+.cta-banner {
+  position: relative;
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(15, 15, 15, 0.92), rgba(26, 22, 12, 0.88)),
+    url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1600&q=80&auto=format&fit=crop') center / cover;
+  animation: cta-bg-pan 24s ease-in-out infinite alternate;
+}
+
+@keyframes cta-bg-pan {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.cta-banner__inner {
+  position: relative;
+  text-align: center;
+  max-width: 720px;
+}
+
+.cta-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.cta-banner__subtitle {
+  margin: 0 0 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-banner__bg {
+    animation: none;
+  }
+}

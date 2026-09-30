@@ -1,0 +1,27 @@
+.admin-templates-page { max-width: 1400px; }
+.admin-templates-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 24px; }
+.admin-templates-header h1 { margin: 2px 0 0; }
+.admin-templates-header p { margin: 4px 0 0; color: #6d7773; }
+.admin-templates-kicker { color: #d74c32; font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.admin-templates-error { padding: 12px 14px; border-left: 3px solid #ba3c25; background: #fff0ec; color: #8d2c1b; }
+.admin-template-filters { display: flex; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid #e4e8e3; margin-bottom: 20px; }
+.admin-template-filters button { border: 0; border-radius: 5px; padding: 8px 12px; background: transparent; color: #52605b; font-size: 12px; font-weight: 650; }
+.admin-template-filters button.is-active { color: #fff; background: #283b3a; }
+.admin-template-filters span { margin-left: 6px; opacity: .7; }
+.admin-template-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.admin-template-item { overflow: hidden; border: 1px solid #dfe5df; border-radius: 6px; background: #fff; }
+.admin-template-preview { height: 155px; position: relative; display: grid; place-items: center; overflow: hidden; background: #eef1ec; color: #74807a; text-decoration: none; font-size: 12px; }
+.admin-template-preview img { width: 100%; height: 100%; object-fit: contain; }
+.admin-template-status { position: absolute; top: 9px; left: 9px; border-radius: 4px; padding: 4px 7px; background: #fff; color: #53615c; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.admin-template-status.status-published { color: #146c43; }
+.admin-template-status.status-archived { color: #7b4c1e; }
+.admin-template-item-body { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px; }
+.admin-template-item-body h2 { margin: 0; font-size: 14px; }
+.admin-template-item-body p { margin: 4px 0 0; color: #7a8580; font-size: 11px; }
+.admin-template-actions { display: flex; align-items: center; gap: 4px; }
+.admin-template-actions button, .admin-template-actions a { min-width: 30px; min-height: 30px; display: grid; place-items: center; border: 1px solid #e1e6e1; border-radius: 4px; padding: 5px; color: #4e5b56; background: #fff; font-size: 10px; text-decoration: none; }
+.admin-template-actions button:hover, .admin-template-actions a:hover { background: #f0f4f0; }
+.admin-template-actions button:last-child { color: #ae3b30; }
+.admin-template-empty { padding: 55px 20px; text-align: center; color: #66736d; }
+.admin-template-empty h2 { margin: 0 0 8px; color: #263533; font-size: 18px; }
+@media (max-width: 620px) { .admin-templates-header { align-items: flex-start; flex-direction: column; } .admin-template-filters { overflow-x: auto; } }

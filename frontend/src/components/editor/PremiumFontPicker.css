@@ -1,0 +1,70 @@
+.premium-font-picker {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.premium-font-picker__search input {
+  margin-top: 5px;
+}
+
+.premium-font-picker__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.premium-font-picker__chip {
+  border: 1px solid var(--editor-border, #dfe4df);
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 9px;
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
+}
+
+.premium-font-picker__chip.is-active {
+  border-color: #f4c542;
+  background: #fff9df;
+  color: #8a6d12;
+}
+
+.premium-font-picker__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--editor-border, #dfe4df);
+  border-radius: 6px;
+}
+
+.premium-font-picker__item {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #eef1ec;
+  padding: 8px 10px;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  gap: 2px;
+}
+
+.premium-font-picker__item.is-active {
+  background: #fff9df;
+}
+
+.premium-font-picker__name {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: #697472;
+}
+
+.premium-font-picker__sample {
+  font-size: 15px;
+  line-height: 1.25;
+  color: var(--editor-ink, #202a2b);
+}
