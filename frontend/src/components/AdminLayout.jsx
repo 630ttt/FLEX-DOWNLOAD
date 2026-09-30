@@ -18,6 +18,7 @@ import { useAuth } from '../context/AuthContext';
 import { api } from '../api/client';
 import './AdminLayout.css';
 import BrandLogo from './BrandLogo';
+import ThemeToggle from './ThemeToggle';
 
 const AdminLayout = () => {
   const { admin, logout } = useAuth();
@@ -304,9 +305,12 @@ const AdminLayout = () => {
             </span>
           </div>
 
-          <div className="admin-topbar-status">
-            <span className="admin-status-dot"></span>
-            System Online
+          <div className="admin-topbar-actions">
+            <ThemeToggle />
+            <div className="admin-topbar-status">
+              <span className="admin-status-dot"></span>
+              System Online
+            </div>
           </div>
         </header>
 

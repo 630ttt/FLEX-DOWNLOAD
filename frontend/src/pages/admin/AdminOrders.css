@@ -277,7 +277,7 @@
 
   margin-bottom: 3px;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.64rem;
 
@@ -299,7 +299,7 @@
 .admin-orders-summary-card small {
   margin-left: 5px;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.68rem;
 }
@@ -367,7 +367,7 @@
 .admin-orders-table-header p {
   margin: 0;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.71rem;
 }
@@ -679,7 +679,7 @@
   display: inline-flex;
   align-items: center;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.65rem;
 }
@@ -709,7 +709,7 @@
 }
 
 .order-quantity small {
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.6rem;
 }
@@ -1057,7 +1057,7 @@
 .admin-orders-uploading {
   display: block;
 
-  color: #8a96a8;
+  color: #667085;
 
   font-size: 0.6rem;
 
@@ -1119,7 +1119,7 @@
 
   margin: 0;
 
-  color: #8a96a8;
+  color: #667085;
 
   font-size: 0.76rem;
 

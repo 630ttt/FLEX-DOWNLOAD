@@ -588,6 +588,12 @@
   font-weight: 700;
 }
 
+.admin-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .admin-status-dot {
   width: 7px;
   height: 7px;

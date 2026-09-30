@@ -49,7 +49,7 @@
 .analytics-header p {
   margin: 10px 0 0;
   max-width: 700px;
-  color: #6b7a90;
+  color: #667085;
   font-size: 0.95rem;
 }
 
@@ -136,7 +136,7 @@
 
 .analytics-periods button.active {
   background: #f4c542;
-  color: #ffffff;
+  color: #061426;
   box-shadow: 0 6px 16px rgba(244, 197, 66, 0.22);
 }
 
@@ -145,7 +145,7 @@
   align-items: center;
   gap: 7px;
   padding-right: 10px;
-  color: #7b8798;
+  color: #667085;
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -251,7 +251,7 @@
   padding: 5px 9px;
   border-radius: 20px;
   background: #fcfcf8;
-  color: #7a8799;
+  color: #667085;
   font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -260,7 +260,7 @@
 .analytics-stat-label {
   display: block;
   margin-bottom: 5px;
-  color: #718096;
+  color: #667085;
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -275,7 +275,7 @@
 
 .analytics-stat-sub {
   margin-top: 8px;
-  color: #8a96a8;
+  color: #667085;
   font-size: 0.74rem;
 }
 
@@ -298,7 +298,7 @@
 
 .analytics-growth span {
   margin-left: 2px;
-  color: #8a96a8;
+  color: #667085;
   font-weight: 600;
 }
 
@@ -358,7 +358,7 @@
 
 .analytics-panel-header p {
   margin: 6px 0 0;
-  color: #7a8799;
+  color: #667085;
   font-size: 0.78rem;
 }
 
@@ -369,7 +369,7 @@
 .analytics-panel-total span {
   display: block;
   margin-bottom: 4px;
-  color: #8a96a8;
+  color: #667085;
   font-size: 0.68rem;
   font-weight: 700;
 }
@@ -395,7 +395,7 @@
   justify-content: space-between;
   width: 72px;
   padding: 4px 8px 28px 0;
-  color: #9aa6b5;
+  color: #667085;
   font-size: 0.64rem;
   text-align: right;
 }
@@ -493,7 +493,7 @@
   width: 100%;
   margin-top: 8px;
   overflow: hidden;
-  color: #8a96a8;
+  color: #667085;
   font-size: 0.58rem;
   text-align: center;
   text-overflow: ellipsis;
@@ -585,7 +585,7 @@
 .analytics-status-item small {
   display: block;
   margin-top: 4px;
-  color: #9aa6b5;
+  color: #667085;
   font-size: 0.65rem;
   text-align: right;
 }
@@ -641,7 +641,7 @@
 .analytics-design-content span {
   display: block;
   margin-top: 4px;
-  color: #8a96a8;
+  color: #667085;
   font-size: 0.68rem;
 }
 
@@ -755,7 +755,7 @@
   justify-content: center;
   min-height: 150px;
   padding: 30px;
-  color: #8a96a8;
+  color: #667085;
   font-size: 0.8rem;
 }
 
@@ -783,7 +783,7 @@
   flex: 0 0 43px;
   border-radius: 12px;
   background: #f4c542;
-  color: #ffffff;
+  color: #061426;
 }
 
 .analytics-insight strong {
@@ -795,7 +795,7 @@
 
 .analytics-insight p {
   margin: 0;
-  color: #718096;
+  color: #667085;
   font-size: 0.76rem;
 }
 
@@ -814,7 +814,7 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  color: #718096;
+  color: #667085;
 }
 
 .analytics-spinner {
@@ -1008,7 +1008,7 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.2px;
-  color: #68758a;
+  color: #667085;
 }
 
 .analytics-revenue-period-top svg {
@@ -1026,7 +1026,7 @@
 }
 
 .analytics-revenue-period-card small {
-  color: #7b8798;
+  color: #667085;
   font-size: 12px;
   font-weight: 600;
 }

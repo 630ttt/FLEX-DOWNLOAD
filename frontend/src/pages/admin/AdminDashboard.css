@@ -43,7 +43,7 @@
 
   margin-bottom: 8px;
 
-  color: #c28b00;
+  color: #8a6500;
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -258,7 +258,7 @@
 
   padding: 5px 8px;
 
-  color: #198754;
+  color: #147347;
 
   background: #eefaf4;
 
@@ -307,7 +307,7 @@
 .dashboard-card-description {
   margin: 0;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.76rem;
 }
@@ -380,7 +380,7 @@
 .dashboard-panel-header p {
   margin: 6px 0 0;
 
-  color: #8a96a8;
+  color: #667085;
 
   font-size: 0.78rem;
 }
@@ -593,7 +593,7 @@
 .dashboard-donut-inner span {
   margin-top: 2px;
 
-  color: #8a96a8;
+  color: #667085;
 
   font-size: 0.7rem;
 
@@ -762,7 +762,7 @@
 .dashboard-action-card span:not(.dashboard-action-icon) {
   display: block;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.68rem;
 
@@ -770,7 +770,7 @@
 }
 
 .dashboard-action-arrow {
-  color: #a5afbd;
+  color: #667085;
 
   font-size: 0.7rem;
 
@@ -854,7 +854,7 @@
 
   margin-bottom: 4px;
 
-  color: #98a2b3;
+  color: #667085;
 
   font-size: 0.68rem;
 
@@ -878,7 +878,7 @@
 .dashboard-summary-card p {
   margin: 4px 0 0;
 
-  color: #8a96a8;
+  color: #667085;
 
   font-size: 0.72rem;
 
@@ -1052,4 +1052,72 @@
     height: 8px;
   }
 
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .section-title,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-card-label,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-panel-header h2,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-bar-row strong,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-legend-item strong,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-action-card strong,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-summary-card strong {
+  color: #f4f7fc;
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-eyebrow,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-card-value,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-panel-title-icon,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-donut-inner strong,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-action-card:hover .dashboard-action-arrow {
+  color: #78adff;
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .section-subtitle,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-card-description,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-panel-header p,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-bar-label,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-donut-inner span,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-legend-label,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-action-card span:not(.dashboard-action-icon),
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-summary-card span,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-summary-card p {
+  color: #c2cede;
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-header-badge,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-panel-badge {
+  color: #b4d3ff;
+  background: #193350;
+  border-color: rgba(120, 173, 255, 0.24);
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-card,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-panel {
+  background: #0d2036;
+  border-color: rgba(235, 243, 255, 0.14);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-card:hover,
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-action-card:hover {
+  background: #15304c;
+  border-color: rgba(120, 173, 255, 0.36);
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-bar-track {
+  background: #1a314d;
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-donut::before {
+  background: #0d2036;
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-action-card {
+  background: #10243b;
+  border-color: rgba(235, 243, 255, 0.14);
+}
+
+html[data-theme='dark'] .admin-layout .admin-dashboard-page .dashboard-summary-card {
+  background: linear-gradient(135deg, #0d2036, #10243b);
+  border-color: rgba(235, 243, 255, 0.14);
 }

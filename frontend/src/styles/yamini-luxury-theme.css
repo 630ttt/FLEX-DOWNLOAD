@@ -458,6 +458,24 @@ html[data-theme='dark'] .admin-layout {
   color: var(--premium-text) !important;
 }
 
+html[data-theme='dark'] .admin-content {
+  background: linear-gradient(180deg, #0b1c31 0%, #061426 100%) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-topbar-title,
+html[data-theme='dark'] .admin-layout .admin-topbar-welcome strong {
+  color: var(--yamini-text);
+}
+
+html[data-theme='dark'] .admin-layout .admin-topbar-welcome {
+  color: var(--yamini-text-secondary);
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-orders-filter-label {
+  color: var(--yamini-text-secondary) !important;
+}
+
 html[data-theme='dark'] .admin-nav-link-active,
 html[data-theme='dark'] .admin-nav-link:hover,
 html[data-theme='dark'] .editor-mobile-dock button.is-active {
@@ -567,7 +585,7 @@ html[data-theme='dark'] .admin-layout :is(
   [class*='description'],
   [class*='subtitle'],
   [class*='lead']
-),
+):not(:where(.admin-dashboard-page *, .design-source-editor *, .design-template-editor *, .design-upload-progress *)),
 html[data-theme='dark'] .design-studio-root :is(
   p:not([class*='error']):not([class*='success']):not([class*='status']):not([role='alert']),
   [class*='description'],
@@ -575,4 +593,177 @@ html[data-theme='dark'] .design-studio-root :is(
   [class*='lead']
 ) {
   color: #ffffff !important;
+}
+
+html[data-theme='dark'] .site-main :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .site-main .customer-auth-card :is(h1, h2, .section-title) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .site-main .customer-auth-card .form-label {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .site-main .marketing-page :is(h1, h2, h3, h4) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(h1, h2, h3, h4, h5, h6, .section-title) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.form-label, .design-upload-mode legend, .design-upload-mode label) {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .card {
+  background-color: #10243b !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-categories-shell, .admin-customers-shell, .admin-designs-table-card, .admin-orders-table-card, .admin-orders-summary-card, .admin-customer-summary-card, .designs-summary-card, .admin-profile-card, .admin-settings-card) {
+  background: #10243b !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-table, .admin-orders-table, .admin-categories-table, .admin-customers-table) thead,
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-table, .admin-orders-table, .admin-categories-table, .admin-customers-table) th {
+  background: #0b1c31 !important;
+  color: var(--yamini-text-secondary) !important;
+  border-color: var(--yamini-border) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-table, .admin-orders-table, .admin-categories-table, .admin-customers-table) td {
+  background: #10243b;
+  color: var(--yamini-text-secondary) !important;
+  border-color: var(--yamini-border) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-table, .admin-orders-table, .admin-categories-table, .admin-customers-table) tbody tr:hover td {
+  background: #193350;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-design-title-cell strong, .category-name, .category-slug, .customer-name-text, .customer-phone, .order-design-cell strong) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-table, .admin-orders-table, .admin-categories-table, .admin-customers-table) td a {
+  color: #9bc4ff;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-orders-table-header, .admin-table-topbar, .admin-categories-table-head, .admin-customers-table-head) {
+  background: #0b1c31 !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-orders-table-header h2, .admin-table-topbar h2, .admin-categories-table-head h2, .admin-customers-table-head h2) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.admin-orders-table-header p, .admin-table-topbar p, .admin-categories-table-head span, .admin-customers-table-head span, .admin-orders-summary-card span, .admin-orders-summary-card small, .designs-summary-card span, .order-design-cell span, .order-quantity small, .customer-email, .customer-address, .category-design-count) {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.category-detail-panel, .category-edit-panel, .customer-detail-panel, .customer-edit-panel) {
+  background: #10243b !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.category-detail-card, .customer-detail-card) {
+  background: #0b1c31 !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.category-detail-card .label, .customer-detail-card .label, .category-detail-card .value, .customer-detail-card .value) {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.design-source-editor, .design-template-editor, .design-upload-progress, .psd-layer-list) {
+  background: #0b1c31 !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main :is(.design-source-editor p, .design-source-editor small, .design-template-editor p, .psd-layer-row, .psd-layer-row small, .design-upload-progress span, .design-upload-progress small) {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .psd-layer-mode,
+html[data-theme='dark'] .admin-layout .admin-main .design-upload-mode label {
+  background: #10243b !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .design-upload-mode label.selected {
+  background: #193350 !important;
+  border-color: var(--yamini-blue) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page {
+  background: radial-gradient(circle at top right, rgba(244, 197, 66, 0.08), transparent 28%), #0b1c31 !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page :is(.analytics-header h1, .analytics-stat-card strong, .analytics-panel-header h2, .analytics-panel-total strong, .analytics-table td strong, .analytics-revenue-period-card strong, .analytics-insight strong) {
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page :is(.analytics-eyebrow, .analytics-panel-kicker) {
+  color: var(--yamini-blue) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page :is(.analytics-header p, .analytics-stat-label, .analytics-stat-sub, .analytics-growth span, .analytics-stat-period, .analytics-panel-header p, .analytics-panel-total span, .analytics-chart-y, .analytics-bar-value, .analytics-bar-label, .analytics-status-name, .analytics-status-item small, .analytics-design-content span, .analytics-table th, .analytics-table td, .analytics-empty, .analytics-insight p, .analytics-revenue-period-top span, .analytics-revenue-period-card small, .analytics-loading) {
+  color: var(--yamini-text-secondary) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page :is(.analytics-toolbar, .analytics-stat-card, .analytics-panel, .analytics-insight, .analytics-revenue-period-card) {
+  background: #10243b !important;
+  border-color: var(--yamini-border) !important;
+  color: var(--yamini-text) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page .analytics-refresh-btn {
+  background: #193350 !important;
+  border-color: var(--yamini-border) !important;
+  color: #b4d3ff !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page .analytics-periods button {
+  color: var(--yamini-text-secondary);
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page .analytics-periods button.active {
+  background: var(--yamini-yellow) !important;
+  color: #061426 !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page :is(.analytics-stat-period, .analytics-design-rank) {
+  background: #193350 !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page :is(.analytics-stat-card, .analytics-panel, .analytics-insight) {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page .analytics-table th {
+  background: #0b1c31 !important;
+  border-color: var(--yamini-border) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page .analytics-table td {
+  border-color: var(--yamini-border) !important;
+}
+
+html[data-theme='dark'] .admin-layout .admin-main .admin-analytics-page .analytics-insight-icon {
+  color: #061426 !important;
 }

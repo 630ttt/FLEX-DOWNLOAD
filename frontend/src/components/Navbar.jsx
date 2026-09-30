@@ -68,7 +68,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`navbar navbar--premium${scrolled ? " navbar--scrolled" : ""}`}>
+    <header className={`navbar navbar--premium${scrolled ? " navbar--scrolled" : ""}${menuOpen ? " navbar--menu-open" : ""}`}>
       <div className="navbar-shell premium-container">
         <Link to="/" className="navbar-brand" onClick={closeMenu} aria-label="YAMINI Flex home">
           <BrandLogo variant="dark" className="navbar-brand-mark" />

@@ -28,6 +28,12 @@
   backdrop-filter: blur(16px);
 }
 
+.navbar--premium.navbar--menu-open {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 100%;
+}
+
 .navbar--scrolled.navbar--premium {
   background: rgba(255, 255, 255, 0.9);
   border-bottom-color: var(--premium-border);
