@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 html,
@@ -30,6 +31,7 @@ body {
   background-color: var(--premium-bg, #ffffff);
   color: var(--premium-text, var(--color-charcoal));
   line-height: 1.65;
+  overflow-x: clip;
 }
 
 #root {

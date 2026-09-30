@@ -44,6 +44,17 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   const navLinkClass = ({ isActive }) =>
     `navbar-link${isActive ? " navbar-link-active" : ""}`;
 
@@ -105,6 +116,7 @@ const Navbar = () => {
       <div
         className={`navbar-mobile${menuOpen ? " navbar-mobile-open" : ""}`}
         aria-hidden={!menuOpen}
+        inert={!menuOpen}
       >
         <div className="navbar-mobile-panel">
           <form className="navbar-mobile-search" onSubmit={handleSearchSubmit}>

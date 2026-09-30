@@ -10,25 +10,25 @@ const BACKGROUND_SLIDES = [
   {
     id: 'weddings',
     image:
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1600&q=80&auto=format&fit=max',
     label: 'Wedding prints',
   },
   {
     id: 'festivals',
     image:
-      'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1600&q=80&auto=format&fit=max',
     label: 'Festival design',
   },
   {
     id: 'business',
     image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&auto=format&fit=max',
     label: 'Business branding',
   },
   {
     id: 'celebrations',
     image:
-      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80&auto=format&fit=max',
     label: 'Celebration cards',
   },
 ];

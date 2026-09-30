@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import {
   FaTachometerAlt,
@@ -11,6 +11,8 @@ import {
   FaChevronRight,
   FaUserCog,
   FaCog,
+  FaBars,
+  FaTimes,
 } from 'react-icons/fa';
 import { useAuth } from '../context/AuthContext';
 import { api } from '../api/client';
@@ -20,6 +22,7 @@ import BrandLogo from './BrandLogo';
 const AdminLayout = () => {
   const { admin, logout } = useAuth();
   const navigate = useNavigate();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const loadAdminTheme = async () => {
@@ -49,6 +52,17 @@ const AdminLayout = () => {
     loadAdminTheme();
   }, []);
 
+  useEffect(() => {
+    if (!sidebarOpen) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setSidebarOpen(false);
+    };
+
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [sidebarOpen]);
+
   const handleLogout = () => {
     logout();
     navigate('/');
@@ -58,9 +72,9 @@ const AdminLayout = () => {
     `admin-nav-link${isActive ? ' admin-nav-link-active' : ''}`;
 
   return (
-    <div className="admin-layout">
+    <div className={`admin-layout${sidebarOpen ? ' admin-layout-sidebar-open' : ''}`}>
       {/* Sidebar */}
-      <aside className="admin-sidebar">
+      <aside className={`admin-sidebar${sidebarOpen ? ' admin-sidebar-open' : ''}`} id="admin-sidebar" aria-label="Admin navigation">
         <div className="admin-sidebar-top">
           <div className="admin-brand">
             <div className="admin-brand-logo">
@@ -78,7 +92,7 @@ const AdminLayout = () => {
           MAIN MENU
         </div>
 
-        <nav className="admin-nav">
+        <nav className="admin-nav" onClick={() => setSidebarOpen(false)}>
 
           {/* Dashboard */}
           <NavLink
@@ -253,11 +267,28 @@ const AdminLayout = () => {
           </button>
         </div>
       </aside>
+      <button
+        type="button"
+        className="admin-sidebar-backdrop"
+        aria-label="Close navigation"
+        onClick={() => setSidebarOpen(false)}
+        tabIndex={sidebarOpen ? 0 : -1}
+      />
 
       {/* Main Content */}
       <div className="admin-content">
         <header className="admin-topbar">
           <div className="admin-topbar-left">
+            <button
+              type="button"
+              className="admin-sidebar-toggle"
+              aria-controls="admin-sidebar"
+              aria-expanded={sidebarOpen}
+              aria-label={sidebarOpen ? 'Close navigation' : 'Open navigation'}
+              onClick={() => setSidebarOpen((open) => !open)}
+            >
+              {sidebarOpen ? <FaTimes /> : <FaBars />}
+            </button>
             <div className="admin-topbar-title">
               <span className="admin-topbar-indicator"></span>
               Admin Dashboard

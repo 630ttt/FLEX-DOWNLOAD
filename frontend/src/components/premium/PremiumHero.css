@@ -213,6 +213,16 @@ html[data-theme='dark'] .btn-premium--ghost:hover {
   }
 }
 
+@media (max-width: 640px) {
+  .premium-hero__bg-slide,
+  .premium-hero__bg-slide.is-active {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .premium-hero__stage-inner,
   .premium-hero__float-card {

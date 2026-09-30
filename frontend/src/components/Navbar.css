@@ -185,6 +185,10 @@
   position: fixed;
   inset: 0;
   top: var(--nav-height);
+  bottom: auto;
+  height: calc(100dvh - var(--nav-height));
+  overflow-x: clip;
+  overflow-y: auto;
   background: rgba(20, 16, 14, 0.35);
   opacity: 0;
   pointer-events: none;
