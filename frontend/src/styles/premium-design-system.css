@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0;400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
   --premium-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -36,7 +36,7 @@
   --premium-gradient-hero: linear-gradient(165deg, #ffffff 0%, #fafafa 40%, #fff9df 100%);
   --premium-gradient-dark: linear-gradient(165deg, #0f0f0f 0%, #1a1814 50%, #12100c 100%);
 
-  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-display: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
   --font-ui: 'Plus Jakarta Sans', var(--font-body);
   --premium-container: min(1280px, 100% - clamp(1.25rem, 5vw, 3.5rem));
   --premium-section-pad: clamp(3.5rem, 7vw, 6.5rem);

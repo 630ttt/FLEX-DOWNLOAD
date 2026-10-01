@@ -97,8 +97,8 @@
 
   font-family: var(
     --font-heading,
-    "Georgia",
-    serif
+    "Plus Jakarta Sans",
+    sans-serif
   );
 
   font-size: 2rem;

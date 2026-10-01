@@ -38,6 +38,33 @@ const GALLERY = [
     src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=85&auto=format&fit=crop',
     label: 'Invitation',
   },
+  {
+    src: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=85&auto=format&fit=crop',
+    label: 'Design studio',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=900&q=85&auto=format&fit=crop',
+    label: 'Celebration',
+    short: true,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=900&q=85&auto=format&fit=crop',
+    label: 'Event details',
+    short: true,
+  },
+];
+
+const GALLERY_END = [
+  {
+    src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&q=85&auto=format&fit=crop',
+    label: 'Celebration lights',
+    short: true,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=900&q=85&auto=format&fit=crop',
+    label: 'Reception detail',
+    short: true,
+  },
 ];
 
 const DesignGallery = ({ apiDesigns = [] }) => {
@@ -50,7 +77,7 @@ const DesignGallery = ({ apiDesigns = [] }) => {
       }))
       .filter((item) => item.src) || [];
 
-  const items = [...GALLERY, ...extra].slice(0, 12);
+  const items = [...GALLERY, ...extra, ...GALLERY_END].slice(0, 17);
 
   return (
     <section className="premium-section design-gallery" aria-labelledby="design-gallery-title">
@@ -69,7 +96,7 @@ const DesignGallery = ({ apiDesigns = [] }) => {
             <Reveal
               key={`${item.src}-${index}`}
               delay={(index % 6) * 50}
-              className={`design-gallery__item${item.tall ? ' design-gallery__item--tall' : ''}${item.wide ? ' design-gallery__item--wide' : ''}`}
+              className={`design-gallery__item${item.tall ? ' design-gallery__item--tall' : ''}${item.wide ? ' design-gallery__item--wide' : ''}${item.short ? ' design-gallery__item--short' : ''}`}
             >
               <figure className="design-gallery__figure">
                 <img

@@ -219,8 +219,7 @@ const HowIt = () => {
             style={{
               margin: '0 0 22px',
               color: '#FFFFFF',
-              fontFamily:
-                'Georgia, "Times New Roman", serif',
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
               fontSize:
                 'clamp(40px, 6vw, 70px)',
               lineHeight: 1.08,
@@ -292,8 +291,7 @@ const HowIt = () => {
           <h2
             style={{
               margin: '12px 0 18px',
-              fontFamily:
-                'Georgia, "Times New Roman", serif',
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
               color: '#0B3D91',
               fontSize:
                 'clamp(29px, 4vw, 43px)',
@@ -441,8 +439,7 @@ const HowIt = () => {
                 style={{
                   margin: '0 0 12px',
                   color: '#0B3D91',
-                  fontFamily:
-                    'Georgia, "Times New Roman", serif',
+                  fontFamily: 'Plus Jakarta Sans, sans-serif',
                   fontSize: '23px',
                   fontWeight: '600',
                   lineHeight: 1.25,
@@ -544,8 +541,7 @@ const HowIt = () => {
               style={{
                 margin: '12px 0 18px',
                 color: '#0B3D91',
-                fontFamily:
-                  'Georgia, "Times New Roman", serif',
+                fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize:
                   'clamp(29px, 4vw, 41px)',
                 lineHeight: 1.2,
@@ -837,8 +833,7 @@ const HowIt = () => {
             style={{
               margin: '12px 0 14px',
               color: '#0B3D91',
-              fontFamily:
-                'Georgia, "Times New Roman", serif',
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
               fontSize:
                 'clamp(29px, 4vw, 41px)',
               fontWeight: '600',
@@ -1008,8 +1003,7 @@ const HowIt = () => {
             style={{
               margin: '0 0 16px',
               color: '#FFFFFF',
-              fontFamily:
-                'Georgia, "Times New Roman", serif',
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
               fontSize:
                 'clamp(29px, 4vw, 43px)',
               fontWeight: '600',
@@ -1081,8 +1075,7 @@ const HowIt = () => {
             style={{
               margin: '12px 0 15px',
               color: '#0B3D91',
-              fontFamily:
-                'Georgia, "Times New Roman", serif',
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
               fontSize:
                 'clamp(29px, 4vw, 41px)',
               fontWeight: '600',

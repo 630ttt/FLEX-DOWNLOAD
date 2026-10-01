@@ -72,7 +72,7 @@
   max-width: 13ch;
   margin: 0 0 1rem;
   color: #fff !important;
-  font-family: var(--font-display, Georgia, serif);
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(2.4rem, 5vw, 4.5rem);
   font-weight: 400;
   line-height: 0.98;
