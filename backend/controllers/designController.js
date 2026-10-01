@@ -212,9 +212,10 @@ const buildDesignFilter = (req) => {
 // @route GET /api/designs?page=1&limit=20&category=xxx&search=xxx
 const getDesigns = async (req, res) => {
   try {
-    const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
-    const limit = Math.min(Math.max(parseInt(req.query.limit, 10) || 20, 1), 100);
-    const skip = (page - 1) * limit;
+    const allResults = req.query.limit === 'all';
+    const page = allResults ? 1 : Math.max(parseInt(req.query.page, 10) || 1, 1);
+    let limit = allResults ? 0 : Math.min(Math.max(parseInt(req.query.limit, 10) || 20, 1), 100);
+    const skip = allResults ? 0 : (page - 1) * limit;
 
     const adminRequest = isAdminRequest(req);
     const filter = buildDesignFilter(req);
@@ -227,18 +228,25 @@ const getDesigns = async (req, res) => {
     };
     const sortBy = sortOptions[req.query.sort] || sortOptions.latest;
 
-    const [designs, total] = await Promise.all([
-      Design.find(filter)
-        .select(adminRequest
-          ? 'title description thumbnail fullImage sourceFile previewImage fileType customizable template category price isFeatured sizeOptions createdAt isActive'
-          : 'title description thumbnail fullImage sourceFile previewImage fileType customizable template.type template.status category price isFeatured sizeOptions createdAt')
-        .populate('category', 'name slug')
-        .sort(sortBy)
-        .skip(skip)
-        .limit(limit)
-        .lean(),
-      Design.countDocuments(filter),
-    ]);
+    const designQuery = Design.find(filter)
+      .select(adminRequest
+        ? 'title description thumbnail fullImage sourceFile previewImage fileType customizable template category price isFeatured sizeOptions createdAt isActive'
+        : 'title description thumbnail fullImage sourceFile previewImage fileType customizable template.type template.status category price isFeatured sizeOptions createdAt')
+      .populate('category', 'name slug')
+      .sort(sortBy);
+
+    let designs;
+    let total;
+    if (allResults) {
+      total = await Design.countDocuments(filter);
+      limit = total || 1;
+      designs = total ? await designQuery.limit(limit).lean() : [];
+    } else {
+      [designs, total] = await Promise.all([
+        designQuery.skip(skip).limit(limit).lean(),
+        Design.countDocuments(filter),
+      ]);
+    }
 
     const normalizedDesigns = await normalizeDesignAssets(designs);
     res.json({

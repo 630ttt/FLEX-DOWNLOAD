@@ -20,7 +20,6 @@ import {
 } from '../../constants/business';
 
 import Loader from '../../components/Loader';
-import CataloguePagination from '../../components/CataloguePagination';
 import DesignPreviewImage from '../../components/DesignPreviewImage';
 
 import './Catalogue.css';
@@ -88,9 +87,6 @@ const Catalogue = () => {
   // URL PARAMETERS
   // =========================================================
 
-  const page =
-    parseInt(searchParams.get('page'), 10) || 1;
-
   const category =
     searchParams.get('category') || '';
 
@@ -124,8 +120,7 @@ const Catalogue = () => {
 
     api
       .get('/designs', {
-        page,
-        limit: 12,
+        limit: 'all',
         category,
         search,
         sort,
@@ -140,7 +135,7 @@ const Catalogue = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [page, category, search, sort]);
+  }, [category, search, sort]);
 
 
   // =========================================================
@@ -163,6 +158,7 @@ const Catalogue = () => {
 
   const updateParams = (updates) => {
     const next = new URLSearchParams(searchParams);
+    next.delete('page');
 
     Object.entries(updates).forEach(([key, value]) => {
       if (value) {
@@ -185,7 +181,6 @@ const Catalogue = () => {
 
     updateParams({
       search: searchInput,
-      page: 1,
     });
   };
 
@@ -199,7 +194,6 @@ const Catalogue = () => {
 
     updateParams({
       search: '',
-      page: 1,
     });
   };
 
@@ -410,7 +404,6 @@ const Catalogue = () => {
             onClick={() =>
               updateParams({
                 category: cat._id,
-                page: 1,
               })
             }
           >
@@ -450,7 +443,6 @@ const Catalogue = () => {
             onChange={(e) =>
               updateParams({
                 sort: e.target.value,
-                page: 1,
               })
             }
           >
@@ -656,20 +648,6 @@ const Catalogue = () => {
 
           </div>
 
-
-          {/* =================================================
-              PAGINATION
-          ================================================= */}
-
-          <CataloguePagination
-            page={pagination.page}
-            totalPages={pagination.totalPages}
-            onPageChange={(newPage) =>
-              updateParams({
-                page: newPage,
-              })
-            }
-          />
 
         </>
 

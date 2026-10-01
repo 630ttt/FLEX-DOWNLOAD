@@ -689,16 +689,15 @@ html[data-theme='dark'] {
 
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 
   display: block;
-
-  transition: transform 0.45s ease;
 }
 
 .catalogue-card:hover
 .catalogue-card-image-wrapper img {
-  transform: scale(1.045);
+  transform: none;
 }
 
 
@@ -1281,5 +1280,6 @@ html[data-theme='dark'] {
 }
 
 .catalogue-card-image-wrapper img {
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
