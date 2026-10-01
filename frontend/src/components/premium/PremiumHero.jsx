@@ -142,17 +142,17 @@ const PremiumHero = ({ printDesignImage }) => {
       <div className="premium-container premium-hero__grid">
         <div className="premium-hero__copy">
           <Reveal>
-            <span className="section-kicker">Print studio · Design platform</span>
+            <span className="section-kicker">YAMINI Flex • Design &amp; printing studio</span>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="premium-hero__title">
-              Create. Customize. <em>Print.</em>
+              Professional design. <em>Premium print.</em>
             </h1>
           </Reveal>
           <Reveal delay={140}>
             <p className="premium-hero__lead">
-              YAMINI Flex unites a professional design studio, curated templates, and premium print — for weddings,
-              festivals, business, and every celebration across India.
+              From wedding flex and event banners to corporate branding and festival signage, we craft polished visuals
+              and print-ready finishing that feel elevated from the very first glance.
             </p>
           </Reveal>
           <Reveal delay={200}>
@@ -213,6 +213,21 @@ const PremiumHero = ({ printDesignImage }) => {
             ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="premium-hero__info-bar premium-container" aria-label="Quick service highlights">
+        <div className="premium-hero__info-item">
+          <span className="premium-hero__info-label">Custom designs</span>
+          <strong>Wedding • Events • Business</strong>
+        </div>
+        <div className="premium-hero__info-item">
+          <span className="premium-hero__info-label">Print finish</span>
+          <strong>Premium vinyl &amp; flex</strong>
+        </div>
+        <div className="premium-hero__info-item">
+          <span className="premium-hero__info-label">Fast turnaround</span>
+          <strong>Design to dispatch</strong>
         </div>
       </div>
     </section>

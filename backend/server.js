@@ -15,6 +15,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const customerAuthRoutes = require('./routes/customerAuthRoutes');
 const templateRoutes = require('./routes/templateRoutes');
 const adminTemplateRoutes = require('./routes/adminTemplateRoutes');
+const { getPublicSiteSettings } = require('./controllers/adminSettingsController');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get('/api/files/:id', streamFileFromGridFs);
+app.get('/api/site-settings', getPublicSiteSettings);
 
 // Health check
 app.get('/api/health', (req, res) => {

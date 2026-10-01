@@ -26,7 +26,11 @@ const {
   deleteCustomerByAdmin,
 } = require('../controllers/customerController');
 const { getAdminProfile, updateAdminProfile, updateAdminPassword } = require('../controllers/authController');
-const { getAdminSettings, updateAdminSettings } = require('../controllers/adminSettingsController');
+const {
+  getAdminSettings,
+  updateAdminSettings,
+  uploadHomepageSectionImage,
+} = require('../controllers/adminSettingsController');
 
 router.use(protectAdmin);
 
@@ -76,6 +80,7 @@ router.put('/profile/password', updateAdminPassword);
 // Admin settings
 router.get('/settings', getAdminSettings);
 router.put('/settings', updateAdminSettings);
+router.post('/settings/homepage-image', upload.single('image'), uploadHomepageSectionImage);
 
 // Customers
 router.get('/customers', getCustomers);

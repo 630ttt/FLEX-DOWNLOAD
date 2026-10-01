@@ -6,6 +6,9 @@
     background 0.35s ease,
     box-shadow 0.35s ease,
     backdrop-filter 0.35s ease;
+  background: rgba(255, 255, 255, 0.78);
+  border-bottom: 1px solid rgba(23, 32, 51, 0.08);
+  backdrop-filter: blur(16px);
 }
 
 .navbar--premium .navbar-shell {
@@ -22,12 +25,6 @@
   min-height: var(--nav-height-scrolled);
 }
 
-.navbar--premium {
-  background: rgba(252, 251, 248, 0.82);
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(16px);
-}
-
 .navbar--premium.navbar--menu-open {
   position: fixed;
   inset: 0 0 auto;
@@ -35,9 +32,9 @@
 }
 
 .navbar--scrolled.navbar--premium {
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom-color: var(--premium-border);
-  box-shadow: 0 8px 32px rgba(30, 20, 15, 0.06);
+  background: rgba(12, 14, 18, 0.9);
+  border-bottom-color: rgba(244, 197, 66, 0.24);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
 }
 
 .navbar-brand {
@@ -84,7 +81,7 @@
   padding: 0.5rem 0.85rem;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--premium-text-muted);
+  color: rgba(23, 32, 51, 0.78);
   text-decoration: none;
   border-radius: 999px;
   transition:
@@ -93,13 +90,13 @@
 }
 
 .navbar-link:hover {
-  color: var(--gold-700, var(--color-gold-dark));
-  background: rgba(244, 197, 66, 0.08);
+  color: var(--gold-700, #0647a6);
+  background: rgba(244, 197, 66, 0.12);
 }
 
 .navbar-link-active {
-  color: var(--gold-700, var(--color-gold-dark));
-  background: var(--gold-100, var(--color-gold-soft));
+  color: var(--gold-700, #0647a6);
+  background: rgba(244, 197, 66, 0.14);
 }
 
 .navbar-main-actions {
@@ -115,9 +112,10 @@
   gap: 0.5rem;
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid var(--premium-border);
-  background: var(--premium-bg-elevated);
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  background: rgba(255, 255, 255, 0.7);
   min-width: 180px;
+  color: rgba(23, 32, 51, 0.8);
 }
 
 .navbar-search-compact input {
@@ -126,6 +124,11 @@
   outline: none;
   font-size: 0.85rem;
   width: 100%;
+  color: #171717;
+}
+
+.navbar-search-compact input::placeholder {
+  color: rgba(23, 32, 51, 0.5);
 }
 
 @media (min-width: 900px) {
@@ -141,13 +144,40 @@
   font-size: 0.88rem;
   font-weight: 500;
   text-decoration: none;
-  color: var(--premium-text);
+  color: rgba(23, 32, 51, 0.82);
   padding: 0.45rem 0.65rem;
   border-radius: 999px;
 }
 
 .navbar-account:hover {
   background: rgba(0, 0, 0, 0.04);
+}
+
+.navbar-menu-button {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(23, 32, 51, 0.08);
+  color: #171717;
+}
+
+.navbar-mobile-panel {
+  background: #ffffff;
+  border-left: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-mobile-search {
+  border-color: rgba(23, 32, 51, 0.1);
+  background: rgba(245, 247, 250, 0.9);
+  color: #171717;
+}
+
+.navbar-mobile-search input {
+  background: transparent;
+  color: #171717;
+}
+
+.navbar-mobile-search input::placeholder {
+  color: rgba(23, 32, 51, 0.52);
 }
 
 @media (min-width: 768px) {

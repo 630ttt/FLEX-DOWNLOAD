@@ -1,8 +1,13 @@
+import { useEffect, useState } from 'react';
 import Reveal from '../Reveal';
 import { DESIGN_PREVIEW_FALLBACK } from '../../utils/designAssets';
+import { api } from '../../api/client';
 import './DesignGallery.css';
 
-const GALLERY = [
+const API_ORIGIN = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api').replace(/\/api\/?$/, '');
+const resolveImageUrl = (src) => src?.startsWith('/') ? `${API_ORIGIN}${src}` : src;
+
+const DEFAULT_GALLERY = [
   {
     src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=85&auto=format&fit=crop',
     label: 'Wedding',
@@ -68,6 +73,50 @@ const GALLERY_END = [
 ];
 
 const DesignGallery = ({ apiDesigns = [] }) => {
+  const [gallery, setGallery] = useState(DEFAULT_GALLERY);
+
+  useEffect(() => {
+    let active = true;
+
+    api
+      .get('/site-settings')
+      .then((response) => {
+        const saved = response?.data?.inspirationGalleryItems || response?.inspirationGalleryItems || DEFAULT_GALLERY;
+
+        if (active) {
+          const normalized = normalizeGalleryItems(saved);
+          setGallery(normalized);
+        }
+      })
+      .catch(() => {
+        if (active) {
+          setGallery(DEFAULT_GALLERY);
+        }
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const normalizeGalleryItems = (items = []) => {
+    if (!Array.isArray(items)) {
+      return DEFAULT_GALLERY;
+    }
+
+    const parsed = items
+      .filter((item) => item && (item.src || item.image || item.imageUrl))
+      .map((item) => ({
+        src: item.src || item.image || item.imageUrl,
+        label: item.label || item.name || 'Studio design',
+        tall: Boolean(item.tall),
+        wide: Boolean(item.wide),
+        short: Boolean(item.short),
+      }));
+
+    return parsed.length ? parsed : DEFAULT_GALLERY;
+  };
+
   const extra =
     apiDesigns
       .slice(0, 4)
@@ -77,7 +126,7 @@ const DesignGallery = ({ apiDesigns = [] }) => {
       }))
       .filter((item) => item.src) || [];
 
-  const items = [...GALLERY, ...extra, ...GALLERY_END].slice(0, 17);
+  const items = [...gallery, ...extra, ...GALLERY_END].slice(0, 17);
 
   return (
     <section className="premium-section design-gallery" aria-labelledby="design-gallery-title">
@@ -100,7 +149,7 @@ const DesignGallery = ({ apiDesigns = [] }) => {
             >
               <figure className="design-gallery__figure">
                 <img
-                  src={item.src}
+                  src={resolveImageUrl(item.src)}
                   alt={item.label}
                   loading="lazy"
                   decoding="async"
