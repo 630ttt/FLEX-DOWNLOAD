@@ -1,4 +1,4 @@
-# Yamini Flex Printing
+# Yamini Flex Printing  s
 
 A printing and design storefront with a customer catalogue, online design editor, template customization, ordering and payment flows, plus an authenticated admin panel for managing the store and customers.
 
